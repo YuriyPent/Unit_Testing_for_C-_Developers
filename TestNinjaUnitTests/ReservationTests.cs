@@ -8,7 +8,7 @@ namespace TestNinjaUnitTests
     public class ReservationTests
     {
         [Test]
-        public void CanBeCanccelledBy_UserIsAdmin_ReturnsTrue()
+        public void CanBeCancelledBy_UserIsAdmin_ReturnsTrue()
         {
             // Arrange
             var reservation = new Reservation();
@@ -18,7 +18,7 @@ namespace TestNinjaUnitTests
             Assert.That(result, Is.True);
         }
         [Test]
-        public void CanBeCancelledBy_SameUserCAncellingTheReservation_ReturnTrue()
+        public void CanBeCancelledBy_SameUserCancellingTheReservation_ReturnTrue()
         {
             var user = new User();
             var reservation = new Reservation { MadeBy = user};
@@ -27,7 +27,7 @@ namespace TestNinjaUnitTests
         }
 
         [Test]
-        public void CanBeCancelledBy_AnotherUserCAncellingTheReservation_ReturnFalse()
+        public void CanBeCancelledBy_AnotherUserCancellingTheReservation_ReturnFalse()
         {
             var reservation = new Reservation { MadeBy = new User()};
             var result = reservation.CanBeCancelledBy(new User());
