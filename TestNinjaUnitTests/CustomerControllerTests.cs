@@ -22,6 +22,9 @@ namespace TestNinjaUnitTests
         [Test]
         public void GetCustomer_IdZero_ReturnOk()
         {
+            var controller = new CustomerController();
+            var result = controller.GetCustomer(1);
+            Assert.That(result, Is.TypeOf<Ok>());
         }
     }
 }
