@@ -22,4 +22,5 @@ namespace TestNinja.Fundamentals
             ErrorLogged?.Invoke(this, Guid.NewGuid());
         }
     }
+
 }
